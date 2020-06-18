@@ -31,7 +31,7 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" th:href="@{/inbox}">Inbox</a>
+    <a class="navbar-brand" th:href="@{/inbox}">Inicio</a>
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -39,7 +39,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li th:if="${currentUser} == null">
-                <a class="nav-link" th:href="@{/signup}">Sign Up</a>
+                <a class="nav-link" th:href="@{/signup}">Nuevo Usuario</a>
             </li>
             <li class="dropdown" th:if="${currentUser} != null">
                 <a href="#"
@@ -53,7 +53,7 @@
                 <ul class="dropdown-menu">
                     <li>
                         <form th:action="@{/logout}" th:method="post">
-                            <button class="btn btn-link" type="submit">Log out</button>
+                            <button class="btn btn-link" type="submit">Salir</button>
                         </form>
                     </li>
                 </ul>
@@ -63,12 +63,6 @@
 </nav>
 
 <div class="container" layout:fragment="content">
-
-    <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-    </div>
-
 </div><!-- /.container -->
 
 <script th:src="@{/webjars/jquery/jquery.min.js}"></script>

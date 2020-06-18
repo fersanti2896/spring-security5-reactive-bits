@@ -2,19 +2,19 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
 <head>
     <meta charset="utf-8"/>
-    <title>Inbox</title>
+    <title>Inicio</title>
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.css" />
 </head>
 <body>
     <div layout:fragment="content">
-    <h1>Inbox</h1>
+    <h1>Inicio</h1>
     <table class="table table-zebra">
         <tr th:each="message : ${messages}">
             <td th:text="${message.from.email}"></td>
             <td th:text="${message.text}"></td>
             <td>
                 <a th:href="@{/messages/{id}(id=${message.id})}">
-                    View
+                    Detalles
                 </a>
             </td>
         </tr>

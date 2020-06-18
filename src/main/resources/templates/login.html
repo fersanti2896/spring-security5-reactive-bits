@@ -5,32 +5,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Please Log In</title>
+	<title>Iniciar Sesion</title>
 </head>
 <body>
 <div class="container"
 	 layout:fragment="content">
-	<h1>Please Log In</h1>
+	<h1>Iniciar Sesion</h1>
 	<form method="post"
 		  th:action="@{/login}">
 		<div th:if="${param.error}"
 			 class="alert alert-danger"
 			 role="alert">
-			Invalid username and password.
+			Correo o Password Incorrectos!
 		</div>
 		<div th:if="${param.logout}"
 			 class="alert alert-success"
 			 role="alert">
-			You have been logged out.
+			Has salido con éxito!
 		</div>
 		<div class="form-group">
 			<label for="username"
-				   class="sr-only">Username</label>
+				   class="sr-only">Correo</label>
 			<input type="text"
 				   id="username"
 				   name="username"
 				   class="form-control"
-				   placeholder="Username"
+				   placeholder="Correo Electronico"
 				   required autofocus>
 		</div>
 		<div class="form-group">
@@ -44,7 +44,7 @@
 				   required>
 		</div>
 		<button class="btn btn-primary"
-				type="submit">Sign in</button>
+				type="submit">Acceder</button>
 	</form>
 </div>
 </body>
