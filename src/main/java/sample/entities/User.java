@@ -22,21 +22,21 @@ public class User {
 	private String nombres;
 
 	@NotEmpty(message = "This field is required")
-	private String lastName;
+	private String apellidos;
 
 	public User() {}
 
 	public User(User user) {
-		this(user.getId(), user.getEmail(), user.getPassword(), user.getFirstName(), user.getLastName());
+		this(user.getId(), user.getEmail(), user.getPassword(), user.getNombres(), user.getApellidos());
 	}
 
-	public User(Long id, String email, String password, String firstName,
-			String lastName) {
+	public User(Long id, String email, String password, String nombres,
+			String apellidos) {
 		this.id = id;
 		this.email = email;
 		this.password = password;
-		this.nombres = firstName;
-		this.lastName = lastName;
+		this.nombres = nombres;
+		this.apellidos = apellidos;
 	}
 
 	public Long getId() {
@@ -63,19 +63,19 @@ public class User {
 		this.password = password;
 	}
 
-	public String getFirstName() {
+	public String getNombres() {
 		return this.nombres;
 	}
 
-	public void setFirstName(String firstName) {
-		this.nombres = firstName;
+	public void setNombres(String nombres) {
+		this.nombres = nombres;
 	}
 
-	public String getLastName() {
-		return this.lastName;
+	public String getApellidos() {
+		return this.apellidos;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
 	}
 }
